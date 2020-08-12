@@ -88,6 +88,10 @@ main .packages label {
   font-weight: 600;
 }
 
+main .packages .arrows {
+  width: 5%;
+}
+
 main .contact {
   display: -webkit-box;
   display: -ms-flexbox;
