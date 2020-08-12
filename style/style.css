@@ -83,13 +83,88 @@ main .packages {
 }
 
 main .packages label {
-  margin: auto;
+  margin: auto auto 5% auto;
   font-size: 24px;
   font-weight: 600;
 }
 
-main .packages .arrows {
-  width: 5%;
+main .packages .pack {
+  width: 350px;
+  height: 280px;
+  margin: auto auto 10px auto;
+  -webkit-box-shadow: 5px 5px 7px #999;
+          box-shadow: 5px 5px 7px #999;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header header'  't1 t2' 'm1 m2' 'info info' 'info2 info2' 'price price';
+}
+
+main .packages .pack .packname {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 60px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 60px;
+}
+
+main .packages .pack p {
+  text-align: center;
+}
+
+main .packages .pack .pmb, main .packages .pack .price {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+main .packages .pack .ptime1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: t1;
+}
+
+main .packages .pack .ptime2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: t2;
+}
+
+main .packages .pack .pmb1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: m1;
+}
+
+main .packages .pack .pmb2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: m2;
+}
+
+main .packages .pack .info1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: info;
+}
+
+main .packages .pack .info2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: info2;
+}
+
+main .packages .pack .price {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: price;
 }
 
 main .contact {

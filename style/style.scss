@@ -63,9 +63,63 @@ main {
         flex-direction: column;
 
         label {
-            margin: auto;
+            margin: auto auto 5% auto;
             font-size: 24px;
             font-weight: 600;
+        }
+        .pack {
+            width: 350px;
+            height: 280px;
+            margin: auto auto 10px auto;
+            box-shadow: 5px 5px 7px #999;
+            display: grid;
+            grid-template-areas: 'header header' 
+            't1 t2'
+            'm1 m2'
+            'info info'
+            'info2 info2'
+            'price price';
+            .packname {
+                grid-area: header;
+                text-align: center;
+                background-color: black;
+                color: white;
+                height: 60px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 60px;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .pmb, .price {
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .ptime1 {
+                grid-area: t1;
+            }
+            .ptime2 {
+                grid-area: t2;
+            }
+            .pmb1 {
+                grid-area: m1;
+            }
+            .pmb2 {
+                grid-area: m2;
+            }
+            .info1 {
+                grid-area: info;
+            }
+            .info2{
+                grid-area: info2;
+            }
+            .price {
+                grid-area: price;
+            }
         }
     }
 
