@@ -28,6 +28,10 @@ nav .burger {
   width: 34px;
 }
 
+nav .nav_links {
+  display: none;
+}
+
 main {
   margin-top: 5%;
 }
@@ -256,5 +260,43 @@ footer .copy {
   grid-column: 1/3;
   -ms-grid-row: 3;
   grid-row: 3;
+}
+
+/*****
+Desktop
+******/
+@media only screen and (min-width: 768px) {
+  nav {
+    margin-top: 2%;
+  }
+  nav .burger {
+    display: none;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  nav .nav_links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .nav_links li {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .nav_links li a {
+    text-decoration: none;
+    color: black;
+    margin: auto 10px;
+    font-weight: 500;
+  }
+  main {
+    margin-top: auto;
+  }
+  main .title {
+    margin-top: 2%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
