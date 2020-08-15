@@ -52,3 +52,12 @@ const add = 'Kha-91, Jaflong, Sylhet';
 
 const addFooter = document.querySelector('section.contact > p.address');
 addFooter.textContent = add;
+
+//Social
+const social = ["https://facebook.com", "https://twitter.com", "https://instagram.com"]
+
+const socialLinks = document.querySelectorAll('section.social > a');
+
+for(let i = 0; i < socialLinks.length; i++) {
+    socialLinks[i].setAttribute("href", social[i])
+}
