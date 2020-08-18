@@ -36,7 +36,7 @@ main {
   margin-top: 5%;
 }
 
-main .title {
+main .title-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,18 +48,28 @@ main .title {
   margin-top: 5%;
 }
 
-main .title .heroimg {
+main .title-block .heroimg {
   width: 100%;
 }
 
-main .title h1.title {
+main .title-block .cta-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .title-block .cta-container .title {
   margin-top: 10%;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
 }
 
-main .title button {
+main .title-block .cta-container button {
   background-color: black;
   border: none;
   width: 160px;
@@ -70,7 +80,7 @@ main .title button {
   font-weight: bold;
 }
 
-main .title button a {
+main .title-block .cta-container button a {
   color: white;
   text-decoration: none;
 }
@@ -267,7 +277,13 @@ Desktop
 ******/
 @media only screen and (min-width: 768px) {
   nav {
-    margin-top: 2%;
+    margin-top: 0;
+    height: 10vh;
+  }
+  nav a {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   nav .burger {
     display: none;
@@ -292,11 +308,54 @@ Desktop
     margin: auto 10px;
     font-weight: 500;
   }
+  nav .nav_links li a:hover {
+    color: #444;
+  }
   main {
     margin-top: auto;
   }
-  main .title {
-    margin-top: 2%;
+  main .title-block {
+    margin-top: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25vw auto;
+        grid-template-columns: 25vw auto;
+    margin-left: 5%;
+  }
+  main .title-block .img-container {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    height: 90vh;
+    overflow: hidden;
+  }
+  main .title-block .img-container .heroimg {
+    width: 100vw;
+  }
+  main .title-block .cta-container {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    margin: 45% 0;
+  }
+  main .title-block .cta-container .title {
+    text-align: left;
+    font-size: 40px;
+  }
+  main .title-block .cta-container button {
+    margin: 0;
+    margin-top: 8%;
+    font-size: 18px;
+    width: 120px;
+    height: 40px;
+  }
+  main .packages {
+    margin-top: 5vh;
+  }
+  main .contact {
+    margin-top: 5vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

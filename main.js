@@ -61,3 +61,22 @@ const socialLinks = document.querySelectorAll('section.social > a');
 for(let i = 0; i < socialLinks.length; i++) {
     socialLinks[i].setAttribute("href", social[i])
 }
+
+//Packages
+const packages = function(name, mb1, mb2, yt, ip, price) {
+    this.name = name,
+    this.mb1 = mb1,
+    this.mb2 = mb2,
+    this.yt = yt,
+    this.ip = ip,
+    this.price = price
+}
+
+const one = new packages('Basic', 40, 10, 50, false, 1000);
+const two = new packages('Medium', 50, 25, 60, false, 1500);
+const three = new packages('Heavy', 100, 50, 150, true, 2000);
+const packs = [one, two, three]
+
+const packagesDOM = document.querySelectorAll('h1.packname')
+packagesDOM[0].innerHTML = "ngwing";
+console.log(packagesDOM);

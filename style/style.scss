@@ -28,7 +28,7 @@ nav {
 main {
     margin-top: 5%;
     
-    .title {
+    .title-block {
         display: flex;
         flex-direction: column;
         margin: auto;
@@ -37,24 +37,28 @@ main {
         .heroimg {
             width: 100%;
         }
-        h1.title {
-            margin-top: 10%;
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-        }
-        button {
-            background-color: black;
-            border: none;
-            width: 160px;
-            height: 50px;
-            margin: auto;
-            margin-top: 10%;
-            font-size: 24px;
-            font-weight: bold;
-            a {
-                color: white;
-                text-decoration: none;
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            .title {
+                margin-top: 10%;
+                font-size: 36px;
+                font-weight: bold;
+                text-align: center;
+            }
+            button {
+                background-color: black;
+                border: none;
+                width: 160px;
+                height: 50px;
+                margin: auto;
+                margin-top: 10%;
+                font-size: 24px;
+                font-weight: bold;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -203,7 +207,13 @@ Desktop
 
 @media only screen and (min-width: 768px) {
     nav {
-        margin-top: 2%;
+        margin-top: 0;
+        height: 10vh;
+
+        a {
+           align-self: center; 
+        }
+
         .burger {
             display: none;
             justify-content: space-evenly;
@@ -221,15 +231,59 @@ Desktop
                     margin: auto 10px;
                     font-weight: 500;
                 }
+
+                a:hover {
+                    color: #444;
+                }
             }
         }
     }
 
     main {
         margin-top: auto;
-        .title {
-            margin-top: 2%;
+
+        .title-block {
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: 25vw auto;
+            margin-left: 5%;
+
+            .img-container {
+                grid-column: 2;
+                grid-row: 1;
+                height: 90vh;
+                overflow: hidden;
+
+                .heroimg {
+                    width: 100vw;
+                }
+            }
+
+            .cta-container {
+                grid-column: 1;
+                grid-row: 1;
+                margin: 45% 0;
+                .title {
+                    text-align: left;
+                    font-size: 40px;
+                }
+                button {
+                    margin: 0;
+                    margin-top: 8%;
+                    font-size: 18px;
+                    width: 120px;
+                    height: 40px;
+                }
+            }
         }
+
+        .packages {
+            margin-top: 5vh;
+        }
+        .contact {
+            margin-top: 5vh;
+        }
+        
     }
 }
 
