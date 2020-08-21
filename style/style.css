@@ -131,7 +131,7 @@ main .packages .pack p {
   text-align: center;
 }
 
-main .packages .pack .pmb, main .packages .pack .price {
+main .packages .pack .pmb1, main .packages .pack .pmb2, main .packages .pack .price {
   font-weight: bold;
   font-size: 24px;
 }

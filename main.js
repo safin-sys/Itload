@@ -4,8 +4,8 @@ $(document).ready(function(){
   });
 
   $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:370,
+    loop:false,
+    margin:360,
     dots:true,
     responsive:{
         0:{
@@ -15,7 +15,11 @@ $(document).ready(function(){
             items:3
         },
         1000:{
-            items:5
+            items:3,
+            margin:0    
+        },
+        1400:{
+            margin:-1000
         }
     }
 });
@@ -77,6 +81,23 @@ const two = new packages('Medium', 50, 25, 60, false, 1500);
 const three = new packages('Heavy', 100, 50, 150, true, 2000);
 const packs = [one, two, three]
 
-const packagesDOM = document.querySelectorAll('h1.packname')
-packagesDOM[0].innerHTML = "ngwing";
-console.log(packagesDOM);
+const packageName = document.querySelectorAll('.packname')
+const packageMb1 = document.querySelectorAll('.pmb1')
+const packageMb2 = document.querySelectorAll('.pmb2')
+const packageYt = document.querySelectorAll('.info1')
+const packageIp = document.querySelectorAll('.info2')
+const packagePrice = document.querySelectorAll('.price')
+
+for(let i = 0; i < packageName.length; i++) {
+    packageName[i].textContent = packs[i].name;
+    packageMb1[i].textContent = packs[i].mb1 + ' Mbps';
+    packageMb2[i].textContent = packs[i].mb2 + ' Mbps';
+    packageYt[i].textContent = packs[i].yt + ' Mbps Youtube'
+    packagePrice[i].textContent = '৳' + packs[i].price + '/M';
+
+    if(packs[i].ip) {
+        packageIp[i].textContent = 'Public Ip'
+    } else {
+        packageIp[i].textContent = 'No Public Ip'
+    }
+}
