@@ -224,7 +224,7 @@ Desktop
             li {
                 list-style: none;
                 display: flex;
-                
+                position: relative;
                 a {
                     text-decoration: none;
                     color: black;
@@ -232,8 +232,22 @@ Desktop
                     font-weight: 500;
                 }
 
-                a:hover {
-                    color: #444;
+                a::before {
+                    content: '';
+                    display: block;
+                    height: 4px;
+                    background: black;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    transform-origin: left;
+                    transform: scale(0, 1);
+                    transition: all 200ms linear;
+                }
+
+                a:hover::before {
+                    transform: scale(1, 1);
                 }
             }
         }
@@ -265,14 +279,14 @@ Desktop
                 margin: 45% 0;
                 .title {
                     text-align: left;
-                    font-size: 40px;
+                    font-size: 3vw;
                 }
                 button {
                     margin: 0;
                     margin-top: 8%;
-                    font-size: 18px;
-                    width: 120px;
-                    height: 40px;
+                    font-size: 1.2vw;
+                    width: 8vw;
+                    height: 5vh;
                 }
             }
         }

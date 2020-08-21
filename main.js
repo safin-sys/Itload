@@ -1,29 +1,3 @@
-//Owl Carousel
-$(document).ready(function(){
-    $(".owl-carousel").owlCarousel();
-  });
-
-  $('.owl-carousel').owlCarousel({
-    loop:false,
-    margin:360,
-    dots:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:3,
-            margin:0    
-        },
-        1400:{
-            margin:-1000
-        }
-    }
-});
-
 //Variables
 //Phone
 const phone = ["+880147258369a","+880987654321b","+880123456789c"];
@@ -101,3 +75,38 @@ for(let i = 0; i < packageName.length; i++) {
         packageIp[i].textContent = 'No Public Ip'
     }
 }
+
+//Owl Carousel
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
+  });
+
+$('.owl-one').owlCarousel({
+    items:1,
+    loop:true,
+    dots:false,
+    autoplay:true,
+    autoplayTimeout:5000
+});
+
+$('.owl-two').owlCarousel({
+    loop:false,
+    margin:360,
+    dots:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2,
+            margin: 30
+        },
+        1000:{
+            items:3,
+            margin:0    
+        },
+        1400:{
+            margin:-1000
+        }
+    }
+});

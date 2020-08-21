@@ -301,6 +301,7 @@ Desktop
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
   }
   nav .nav_links li a {
     text-decoration: none;
@@ -308,8 +309,25 @@ Desktop
     margin: auto 10px;
     font-weight: 500;
   }
-  nav .nav_links li a:hover {
-    color: #444;
+  nav .nav_links li a::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  nav .nav_links li a:hover::before {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
   main {
     margin-top: auto;
@@ -342,14 +360,14 @@ Desktop
   }
   main .title-block .cta-container .title {
     text-align: left;
-    font-size: 40px;
+    font-size: 3vw;
   }
   main .title-block .cta-container button {
     margin: 0;
     margin-top: 8%;
-    font-size: 18px;
-    width: 120px;
-    height: 40px;
+    font-size: 1.2vw;
+    width: 8vw;
+    height: 5vh;
   }
   main .packages {
     margin-top: 5vh;
