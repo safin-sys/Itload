@@ -376,4 +376,54 @@ Desktop
     margin-top: 5vh;
   }
 }
+
+/*****************************************************************************************
+                                         REGISTRATION PAGE
+*****************************************************************************************/
+.reglabel {
+  width: 90%;
+  margin: 5% auto auto auto;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: 2% auto auto auto;
+}
+
+.form-container form input {
+  width: 90vw;
+  border: solid black 2px;
+  padding: 6px;
+  margin: 8px 0;
+}
+
+.form-container form .terms {
+  font-size: 14px;
+  margin: 5% auto 5% 5%;
+}
+
+.form-container form .regsubmit {
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.form-container .regdownload {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.form-container .regdownload a {
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */

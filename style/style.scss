@@ -301,3 +301,48 @@ Desktop
     }
 }
 
+
+/*****************************************************************************************
+                                         REGISTRATION PAGE
+*****************************************************************************************/
+.reglabel {
+    width: 90%;
+    margin: 5% auto auto auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 2% auto auto auto;
+    form {
+        input {
+            width: 90vw;
+            border: solid black 2px;
+            padding: 6px;
+            margin: 8px 0;
+        }
+
+        .terms {
+            font-size: 14px;
+            margin: 5% auto 5% 5%;
+        }
+
+        .regsubmit {
+            border: none;
+            background-color: black;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 6px;
+        }
+    }
+
+    .regdownload {
+        text-align: center;
+        margin-top: 10%;
+        a {
+            color: black;
+        }
+    }
+}
