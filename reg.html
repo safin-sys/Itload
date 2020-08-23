@@ -11,16 +11,23 @@
     <header>
         <nav>
             <a href="index.html"><img src="assets/itload.png" alt="itload logo" class="logo"></a>
-            <img src="assets/hamburger.svg" alt="hamburger button" class="burger" role="button">
+            <img src="assets/hamburger.svg" alt="hamburger button" class="burger" role="button" onclick="toggleNav()" id="burger">
+            <img src="assets/hamclose.svg" alt="hamburger button" class="burgerclose" role="button" onclick="toggleNav()">
             <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="index.html">Home</a></li>
                 <li><a href="index.html#packages">Packages</a></li>
-                <li><a class="current" href="reg.html">Registration</a></li>
+                <li><a href="reg.html">Registration</a></li>
                 <li><a href="index.html#contact">Contact Us</a></li>
             </ul>
         </nav>
-    </header>
 
+        <ul class="mobilenav_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#packages">Packages</a></li>
+            <li><a class="current" href="reg.html">Registration</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+    </header>
     <main class="regmain">
         <h2 class="reglabel">Registration Form</h2>
         <div class="form-container">
@@ -60,7 +67,7 @@
                 <button type="submit" class="regsubmit">Submit</button>
             </form>
 
-            <h3 class="regdownload">OR<br><a href="#">Download the Form</a></h3>
+            <h3 class="regdownload">OR<br><a href="assets/Itload Registration Form.png">Download the Form</a></h3>
         </div>
     </main>
 
@@ -89,5 +96,8 @@
         </section>
         <p class="copy">Copyright © 2020 Itload. All Rights Reserved.</p>
     </footer>
+    <script src="jquery.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

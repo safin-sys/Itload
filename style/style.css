@@ -24,12 +24,33 @@ nav .logo {
   width: 90px;
 }
 
-nav .burger {
+nav .burger, nav .burgerclose {
   width: 34px;
 }
 
-nav .nav_links {
+nav .nav_links, nav .burgerclose {
   display: none;
+}
+
+.mobilenav_links {
+  display: none;
+  margin-top: 5%;
+  width: 100%;
+  position: absolute;
+  list-style: none;
+  background-color: black;
+  z-index: 10;
+}
+
+.mobilenav_links li {
+  margin: 4vh;
+  text-align: center;
+}
+
+.mobilenav_links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }
 
 main {
@@ -285,7 +306,7 @@ Desktop
         -ms-grid-row-align: center;
         align-self: center;
   }
-  nav .burger {
+  nav #burger {
     display: none;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;

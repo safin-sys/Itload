@@ -110,3 +110,19 @@ $('.owl-two').owlCarousel({
         }
     }
 });
+
+const burger = document.querySelector('img.burger')
+const burgerclose = document.querySelector('img.burgerclose')
+const mobilenav = document.querySelector('.mobilenav_links')
+
+function toggleNav() {
+    if(mobilenav.style.display == "block") {
+        mobilenav.style.display = "none"
+        burgerclose.style.display = "none"
+        burger.style.display = "block"
+    } else {
+        mobilenav.style.display = "block"
+        burger.style.display = "none"
+        burgerclose.style.display = "block"
+    }
+}

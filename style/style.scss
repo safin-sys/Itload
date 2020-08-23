@@ -17,11 +17,30 @@ nav {
     .logo {
         width: 90px;
     }
-    .burger {
+    .burger, .burgerclose {
         width: 34px;
     }
-    .nav_links {
+    .nav_links, .burgerclose {
         display: none;
+    }
+}
+
+.mobilenav_links {
+    display: none;
+    margin-top: 5%;
+    width: 100%;
+    position: absolute;
+    list-style: none;
+    background-color: black;
+    z-index: 10;
+    li {
+        margin: 4vh;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
     }
 }
 
@@ -214,7 +233,7 @@ Desktop
            align-self: center; 
         }
 
-        .burger {
+        #burger {
             display: none;
             justify-content: space-evenly;
         }
