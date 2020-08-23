@@ -111,6 +111,7 @@ $('.owl-two').owlCarousel({
     }
 });
 
+//Mobile Nav
 const burger = document.querySelector('img.burger')
 const burgerclose = document.querySelector('img.burgerclose')
 const mobilenav = document.querySelector('.mobilenav_links')
