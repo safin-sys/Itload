@@ -97,7 +97,7 @@ $('.owl-two').owlCarousel({
         0:{
             items:1
         },
-        600:{
+        700:{
             items:2,
             margin: 30
         },
@@ -105,7 +105,7 @@ $('.owl-two').owlCarousel({
             items:3,
             margin:0    
         },
-        1400:{
+        2000:{
             margin:-1000
         }
     }

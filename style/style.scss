@@ -172,9 +172,9 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 5%;
-    margin-top: 20%;
+    margin-top: 10vh;
     section {
-        margin: 5%;
+        margin: 2vh;
         label {
             color: white;
             font-size: 24px;
@@ -192,7 +192,7 @@ footer {
         grid-column: 2;
     }
     .copy {
-        margin: 10% 0 0 0;
+        margin: 2vh 0 0 0;
         text-align: center;
         color: white;
         font-size: 14px;
@@ -312,20 +312,26 @@ Desktop
 
 .form-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 90%;
     margin: 2% auto auto auto;
     form {
-        input {
-            width: 90vw;
-            border: solid black 2px;
-            padding: 6px;
-            margin: 8px 0;
+        display: flex;
+        flex-wrap: wrap;
+        section {
+            flex-basis: 90vw;
+            input {
+                width: 100%;
+                border: solid black 2px;
+                padding: 6px;
+                margin: 8px 0;
+            }
         }
 
         .terms {
+            width: 90vw;
             font-size: 14px;
-            margin: 5% auto 5% 5%;
+            margin: 2vh auto 2vh 4vw;
         }
 
         .regsubmit {
@@ -340,9 +346,31 @@ Desktop
 
     .regdownload {
         text-align: center;
-        margin-top: 10%;
+        margin: 10% auto 0 auto;
         a {
             color: black;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .form-container {
+        form {
+            width: 60vw;
+            section {
+                flex-basis: 24vw;
+                margin: 10px;
+            }
+
+            .terms {
+                margin: 2vh auto 2vh 2vw;
+            }
+    
+        }
+
+        
+        .regdownload {
+            width: 20vw;
         }
     }
 }
