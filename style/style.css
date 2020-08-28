@@ -396,6 +396,12 @@ Desktop
   main .contact {
     margin-top: 5vh;
   }
+  main .contact .call {
+    margin-top: 3vh;
+  }
+  main .contact .email {
+    margin-top: 3vh;
+  }
 }
 
 /*****************************************************************************************
